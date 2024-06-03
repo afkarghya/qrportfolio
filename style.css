@@ -1,0 +1,138 @@
+        html, body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            
+        }
+        * {
+            font-family: "Roboto Flex", sans-serif;
+            font-optical-sizing: auto;
+        }
+        #content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 50px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        @media (max-width: 860px) {
+            body {
+                align-items: start;
+            }
+
+            #content {
+                flex-direction: column-reverse;
+                align-items: center;
+                padding: 50px;
+            }
+        }
+
+        #text {
+            font-family: 'HD';
+            font-style: normal;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+            width: 100%;
+            height: fit-content;
+            font-weight: 400;
+        }
+
+        #parents {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #parents-container {
+            display: flex;
+            gap: 15px;
+            height: 37px;
+        }
+
+        #parents-container a::after {
+            display: none;
+        }
+
+        .parents-name {
+            position: relative;
+            top: 0;
+            cursor: pointer;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            padding: 5px 10px 5px 5px;
+            gap: 10px;
+            background: #F5F5F5;
+            border-radius: 100px;
+            transition: ease 200ms;
+        }
+
+        .parents-name:hover {
+            filter: brightness(95%);
+            top: -3px;
+            border-radius: 10px;
+        }
+
+        .parents-name:hover > img[src="priyalal.jpg"]{
+            border-radius: 5px;
+        }
+
+        .parents-name:hover > img[src="sharmistha.jpg"] {
+            border-radius: 5px;
+        }
+
+        a, span {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.75);
+            position : relative;
+            transition: 250ms;
+        }
+
+        a::after {
+            content : "";
+            position : absolute;
+            width : 100%;
+            height : 1.5px;
+            background-color: rgba(0, 0, 0, 0.25);
+            bottom: 0;
+            left: 0;
+            transition: 250ms;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a:hover::after {
+            background-color: black;
+        }
+
+        img {
+            aspect-ratio: 1 / 1;
+            background: url(26220685_148080395846755_7623876779592332452_o.jpg);
+            border-radius: 100%;
+        }
+
+        img[src="arghya.jpg"] {
+            max-height: 300px;
+            max-width: 300px;
+            width: 100%;
+            height: 100%;
+            transition: 250ms;
+        }
+
+        img[src="priyalal.jpg"], img[src="sharmistha.jpg"] {
+            width: 27px;
+            height: 27px;
+            transition: ease-in-out 200ms;
+        }
+
+        
